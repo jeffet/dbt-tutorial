@@ -1,3 +1,11 @@
+-- Top section overrides the dbt_project.yml configuration to create a view vs a table
+{{
+  config(
+    materialized='view'
+  )
+}}
+
+
 with customers as (
 
     select
